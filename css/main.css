@@ -1168,7 +1168,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #b4ccff;
+  background: #ff861d;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2288,4 +2288,10 @@ embed {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+.header {
+  background: url("https://z3.ax1x.com/2021/09/26/46cKRx.jpg");
+  background-position: 0% 10%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
