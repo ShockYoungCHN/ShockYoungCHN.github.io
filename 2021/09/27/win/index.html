@@ -19,7 +19,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"shockyoungchn.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":10,"onmobile":true},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"shockyoungchn.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":10,"onmobile":true},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="Here&#39;s something encrypted, password is required to continue reading.">
@@ -170,10 +170,6 @@
     </header>
 
     
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
   <div class="reading-progress-bar"></div>
 
 
@@ -249,7 +245,7 @@
 
       
         <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="ecebd2cfb2d8892fd994059b22fe1b4de8db8ecc194f22d60aa835b28f0401a4">0995c06c86accb8f1a6f2e90f5979125e5bd0548a06a75b794fc646dfbd097bf41600a680d7fca8e69ef9b06ce9c4182f43ee6ad95b722ee90182396c96ee4be9355e593f856af57d1404abcca9b59fd619c6ec9728445820fa9e844cb9c1feded7998955ca7d93dafb27833d072b9493f0909e0f2e35bff2e96295e89789d4d6f4917f4746e7af092d0fb7dcf37fc2a316e88e248f81429e1d8c3c729d070bc</script>
+  <script id="hbeData" type="hbeData" data-hmacdigest="fd5397731de0159ef1fda1f0f8bfc09f2fde867b7b755b401fc0b92770d711b2">0995c06c86accb8f1a6f2e90f5979125d5fefde0e6ce25a43f4e235dece9bf67f39e1d5a7b085707944b5d6f2dcd76938370dfcb138aa533f185a28e4278c2db45b9dfc3a616eafd2069a147d413e35c20de833a35670eb186990f84e883fcc7c8b8b1f295a6ea86220ab36f9eaffbed44fbdf7d58c4d7198a258c681de35bd4dc2e06ff5689ff96dc11612a2bce151ac0a4d8f583a1826d821e7282dec28ba25662257fa1bbcebf09c1186bfaf0760cec8ddca7873ae1fdbe72ec76c76b442a7d887d61eb42708ca47cb9db399cbdf0ba3bd452e2458c8623ba3a8bf69edb1d4f9aa735a7aa5c5f8efe07733ad7decfe1f5957c7cf43a192e2c24cc7369c933ac6a6bf7fdc6c73613903282f777d5ce448c7fba4c8729d28016ee2ef9b0daed61a1b1223d258be808fa02e23d98779b308b3117ae439a37db295780bb68fecf9e2f04edce68896baf2c378a9c69d3f4</script>
   <div class="hbe hbe-content">
     <div class="hbe hbe-input hbe-input-default">
       <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
@@ -265,6 +261,30 @@
     
     
     
+        <div class="reward-container">
+  <div></div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    Donate
+  </button>
+  <div id="qr" style="display: none;">
+      <div style="display: inline-block;">
+        <img src="/images/wechat.jpg" alt="Samurai Young wechat">
+        <p>wechat</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.jpg" alt="Samurai Young Alipay">
+        <p>Alipay</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/paypal.png" alt="Samurai Young PayPal">
+        <p>PayPal</p>
+      </div>
+
+  </div>
+</div>
+
 
       <footer class="post-footer">
           <div class="post-tags">
@@ -379,6 +399,10 @@
 
 
       </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
 
     </div>
   </aside>
