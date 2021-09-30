@@ -22,30 +22,41 @@
     var CONFIG = {"hostname":"shockyoungchn.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Young&#39;s code &amp; their own zen cosmos">
-<meta property="og:type" content="website">
-<meta property="og:title" content="SamuraiY&#39;s Zen">
-<meta property="og:url" content="https://shockyoungchn.github.io/index.html">
+  <meta name="description" content="本次主题是leetcode141、142环形链表的解法； 在阅读前，你需要了解：链表&#x2F;环形链表基础知识，基础mod运算,LC141 环形链表 I、LC142 环形链表 II的题目。LC141 环形链表 I: 12345给定一个链表，判断链表中是否有环。如果链表中有某个节点，可以通过连续跟踪 next 指针再次到达，则链表中存在环。 为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链">
+<meta property="og:type" content="article">
+<meta property="og:title" content="lc141,142">
+<meta property="og:url" content="https://shockyoungchn.github.io/2021/09/30/lc141-142/index.html">
 <meta property="og:site_name" content="SamuraiY&#39;s Zen">
-<meta property="og:description" content="Young&#39;s code &amp; their own zen cosmos">
+<meta property="og:description" content="本次主题是leetcode141、142环形链表的解法； 在阅读前，你需要了解：链表&#x2F;环形链表基础知识，基础mod运算,LC141 环形链表 I、LC142 环形链表 II的题目。LC141 环形链表 I: 12345给定一个链表，判断链表中是否有环。如果链表中有某个节点，可以通过连续跟踪 next 指针再次到达，则链表中存在环。 为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://shockyoungchn.github.io/2021/09/30/lc141-142/listnode.jpg">
+<meta property="og:image" content="https://shockyoungchn.github.io/2021/09/30/lc141-142/meet.jpg">
+<meta property="og:image" content="https://shockyoungchn.github.io/2021/09/30/lc141-142/2.jpg">
+<meta property="og:image" content="https://shockyoungchn.github.io/2021/09/30/lc141-142/brief.jpg">
+<meta property="og:image" content="https://shockyoungchn.github.io/2021/09/30/lc141-142/step1.jpg">
+<meta property="og:image" content="https://shockyoungchn.github.io/2021/09/30/lc141-142/step2.jpg">
+<meta property="og:image" content="https://shockyoungchn.github.io/2021/09/30/lc141-142/step3.jpg">
+<meta property="og:image" content="https://shockyoungchn.github.io/2021/09/30/lc141-142/last.jpg">
+<meta property="article:published_time" content="2021-09-30T02:48:46.000Z">
+<meta property="article:modified_time" content="2021-09-30T05:42:21.983Z">
 <meta property="article:author" content="Samurai Young">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://shockyoungchn.github.io/2021/09/30/lc141-142/listnode.jpg">
 
-<link rel="canonical" href="https://shockyoungchn.github.io/">
+<link rel="canonical" href="https://shockyoungchn.github.io/2021/09/30/lc141-142/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>SamuraiY's Zen</title>
+  <title>lc141,142 | SamuraiY's Zen</title>
   
 
 
@@ -179,9 +190,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
@@ -197,10 +209,9 @@
       <meta itemprop="name" content="SamuraiY's Zen">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/30/lc141-142/" class="post-title-link" itemprop="url">lc141,142</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          lc141,142
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -214,6 +225,13 @@
             </span>
 
           
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
 
         </div>
       </header>
@@ -224,7 +242,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>本次主题是leetcode141、142环形链表的解法；</p>
+        <p>本次主题是leetcode141、142环形链表的解法；</p>
 <p>在阅读前，你需要了解：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/29627391">链表/环形链表</a>基础知识，基础mod运算,<br><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/linked-list-cycle/">LC141 环形链表 I</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/linked-list-cycle-ii/">LC142 环形链表 II</a>的题目。<br><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/linked-list-cycle/">LC141 环形链表 I</a>:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">给定一个链表，判断链表中是否有环。</span><br><span class="line"></span><br><span class="line">如果链表中有某个节点，可以通过连续跟踪 next 指针再次到达，则链表中存在环。 为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。注意：pos 不作为参数进行传递，仅仅是为了标识链表的实际情况。</span><br><span class="line"></span><br><span class="line">如果链表中存在环，则返回 true 。 否则，返回 false 。</span><br></pre></td></tr></table></figure>
 <p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/linked-list-cycle-ii/">LC142 环形链表 II</a>:</p>
@@ -269,234 +287,30 @@ ps：以后应该不会这样更新了，以后只贴代码、题目、简单思
 
 
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://shockyoungchn.github.io/2021/09/28/hashset_source_code/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Samurai Young">
-      <meta itemprop="description" content="Young's code & their own zen cosmos">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SamuraiY's Zen">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/28/hashset_source_code/" class="post-title-link" itemprop="url">How hashSet and its methods work</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2021-09-28 14:20:00 / Modified: 14:52:33" itemprop="dateCreated datePublished" datetime="2021-09-28T14:20:00+08:00">2021-09-28</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Let’s start with a leetcode problem:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">lc.187</span><br><span class="line">The DNA sequence is composed of a series of nucleotides abbreviated as &#x27;A&#x27;, &#x27;C&#x27;, &#x27;G&#x27;, and &#x27;T&#x27;.</span><br><span class="line"></span><br><span class="line">*For example, &quot;ACGAATTCCG&quot; is a DNA sequence.</span><br><span class="line"></span><br><span class="line">Given a string s that represents a DNA sequence, return all the 10-letter-long sequences (substrings) that occur more than once in a DNA molecule. You may return the answer in any order.</span><br><span class="line"></span><br><span class="line">example 1:</span><br><span class="line">Input: s = &quot;AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT&quot;</span><br><span class="line">Output: [&quot;AAAAACCCCC&quot;,&quot;CCCCCAAAAA&quot;]</span><br><span class="line"></span><br><span class="line">example 2:</span><br><span class="line">Input: s = &quot;AAAAAAAAAAAAA&quot;</span><br><span class="line">Output: [&quot;AAAAAAAAAA&quot;]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">link：https://leetcode-cn.com/problems/repeated-dna-sequences</span><br></pre></td></tr></table></figure>
-<p>solution:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> List&lt;String&gt; <span class="title">findRepeatedDnaSequences</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> L = <span class="number">10</span>, n = s.length();</span><br><span class="line">    HashSet&lt;String&gt; seen = <span class="keyword">new</span> HashSet(), output = <span class="keyword">new</span> HashSet();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// iterate over all sequences of length L</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> start = <span class="number">0</span>; start &lt; n - L + <span class="number">1</span>; ++start) &#123;</span><br><span class="line">      String tmp = s.substring(start, start + L);</span><br><span class="line">      <span class="keyword">if</span> (seen.contains(tmp)) output.add(tmp);</span><br><span class="line">      seen.add(tmp);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> ArrayList&lt;String&gt;(output);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>the official solution makes me wonder the if THE TIME COMPLEXITY of contains method is as simple(O(1)) as it seems.besides,also about how HashSet works.</p>
-<p>from the code below(jdk8) can we see that actually HashSet is realized by HashMap,</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HashSet</span>&lt;<span class="title">E</span>&gt;</span></span><br><span class="line"><span class="class">    <span class="keyword">extends</span> <span class="title">AbstractSet</span>&lt;<span class="title">E</span>&gt;</span></span><br><span class="line"><span class="class">    <span class="keyword">implements</span> <span class="title">Set</span>&lt;<span class="title">E</span>&gt;, <span class="title">Cloneable</span>, <span class="title">java</span>.<span class="title">io</span>.<span class="title">Serializable</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> serialVersionUID = -<span class="number">5024744406713321676L</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">transient</span> HashMap&lt;E,Object&gt; map;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Dummy value to associate with an Object in the backing Map</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Object PRESENT = <span class="keyword">new</span> Object();</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Constructs a new, empty set; the backing &lt;tt&gt;HashMap&lt;/tt&gt; instance has</span></span><br><span class="line"><span class="comment">     * default initial capacity (16) and load factor (0.75).</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">HashSet</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<p>Then here comes the problem,HashSet only requires key but no value,so we actually need a object to work as value and that is</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Object PRESENT = <span class="keyword">new</span> Object();</span><br></pre></td></tr></table></figure>
-
-<p>Having a basic view of how HashSet works,let’s try to understand some HashSet methods,<br>take the HashSet.contains for example:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">contains</span><span class="params">(Object o)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> map.containsKey(o);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>It tells that even the HashSet.contains method is based on map.containsKey.Then let’s check it out.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">Method containsKey:   </span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Returns &lt;tt&gt;true&lt;/tt&gt; if this map contains a mapping for the</span></span><br><span class="line"><span class="comment">     * specified key.</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span>   key   The key whose presence in this map is to be tested</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> &lt;tt&gt;true&lt;/tt&gt; if this map contains a mapping for the specified</span></span><br><span class="line"><span class="comment">     * key.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">containsKey</span><span class="params">(Object key)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> getNode(hash(key), key) != <span class="keyword">null</span>;<span class="comment">//hash function maps keys to some values,but there might be code collision</span></span><br><span class="line">    &#125;</span><br><span class="line">   </span><br><span class="line">Method getNode:</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 该方法是Map.get方法的具体实现</span></span><br><span class="line"><span class="comment">* 接收两个参数</span></span><br><span class="line"><span class="comment">* <span class="doctag">@param</span> hash key的hash值，根据hash值在节点数组中寻址，该hash值是通过hash(key)得到的，可参见：hash方法解析</span></span><br><span class="line"><span class="comment">* <span class="doctag">@param</span> key key对象，当存在hash碰撞时，要逐个比对是否相等</span></span><br><span class="line"><span class="comment">* <span class="doctag">@return</span> 查找到则返回键值对节点对象，否则返回null</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">final</span> Node&lt;K,V&gt; <span class="title">getNode</span><span class="params">(<span class="keyword">int</span> hash, Object key)</span> </span>&#123;</span><br><span class="line">    Node&lt;K,V&gt;[] tab; Node&lt;K,V&gt; first, e; <span class="keyword">int</span> n; K k; <span class="comment">// 声明节点数组对象、链表的第一个节点对象、循环遍历时的当前节点对象、数组长度、节点的键对象</span></span><br><span class="line">    <span class="comment">// 节点数组赋值、数组长度赋值、通过位运算得到求模结果确定链表的首节点</span></span><br><span class="line">    <span class="keyword">if</span> ((tab = table) != <span class="keyword">null</span> &amp;&amp; (n = tab.length) &gt; <span class="number">0</span> &amp;&amp;</span><br><span class="line">        (first = tab[(n - <span class="number">1</span>) &amp; hash]) != <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (first.hash == hash &amp;&amp; <span class="comment">// 首先比对首节点，如果首节点的hash值和key的hash值相同 并且 首节点的键对象和key相同（地址相同或equals相等），则返回该节点</span></span><br><span class="line">            ((k = first.key) == key || (key != <span class="keyword">null</span> &amp;&amp; key.equals(k))))</span><br><span class="line">            <span class="keyword">return</span> first; <span class="comment">// 返回首节点</span></span><br><span class="line"> </span><br><span class="line">        <span class="comment">// 如果首节点比对不相同、那么看看是否存在下一个节点，如果存在的话，可以继续比对，如果不存在就意味着key没有匹配的键值对    </span></span><br><span class="line">        <span class="keyword">if</span> ((e = first.next) != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="comment">// 如果存在下一个节点 e，那么先看看这个首节点是否是个树节点</span></span><br><span class="line">            <span class="keyword">if</span> (first <span class="keyword">instanceof</span> TreeNode)</span><br><span class="line">                <span class="comment">// 如果是首节点是树节点，那么遍历树来查找</span></span><br><span class="line">                <span class="keyword">return</span> ((TreeNode&lt;K,V&gt;)first).getTreeNode(hash, key); </span><br><span class="line"> </span><br><span class="line">            <span class="comment">// 如果首节点不是树节点，就说明还是个普通的链表，那么逐个遍历比对即可    </span></span><br><span class="line">            <span class="keyword">do</span> &#123;</span><br><span class="line">                <span class="keyword">if</span> (e.hash == hash &amp;&amp;</span><br><span class="line">                    ((k = e.key) == key || (key != <span class="keyword">null</span> &amp;&amp; key.equals(k)))) <span class="comment">// 比对时还是先看hash值是否相同、再看地址或equals</span></span><br><span class="line">                    <span class="keyword">return</span> e; <span class="comment">// 如果当前节点e的键对象和key相同，那么返回e</span></span><br><span class="line">            &#125; <span class="keyword">while</span> ((e = e.next) != <span class="keyword">null</span>); <span class="comment">// 看看是否还有下一个节点，如果有，继续下一轮比对，否则跳出循环</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">null</span>; <span class="comment">// 在比对完了应该比对的树节点 或者全部的链表节点 都没能匹配到key，那么就返回null</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>Up to now,we find that method HashSet.contains utilizes the HashMap.getNode to check if HashSet contains such a object,<br>and HashMap.getNode searches the object by traversing the HashMap</p>
-<blockquote>
-<p>HashMap is realized by a Node array which probably has Tree or LinkedList linked on it;<br>To fully understand method getNode,please refer to:<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/28501879">HashMap底层实现</a>.</p>
-</blockquote>
-<p>In a word,in function containsKey,if key can be matched,it returns true.By traversing the tree or LinkedList,the time complexity isn’t O(1),<br>it muchly depends on how HashMap is hashed.Thus I think the time complexity of HashSet.contains is O(<em>k·l</em>)</p>
-<blockquote>
-<p><em>k</em> is the size of HashSet(let’s assume that the value in HashSet is String)<em>l</em> is the length of a String.</p>
-</blockquote>
-<p>Actually,only under the most extreme situation can it becomes Θ(<em>k·l</em>),under most situations,we can regard the time complexity of contains as <em>Θ(1) or Θ(<em>l</em>)</em>.</p>
-<blockquote>
-<p>(AHHHHHHH it suddenly reminds me of Pseudo Polynomial Time,but already too much for today, might post another blog to explain it later)</p>
-</blockquote>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://shockyoungchn.github.io/2021/09/27/win/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Samurai Young">
-      <meta itemprop="description" content="Young's code & their own zen cosmos">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SamuraiY's Zen">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/27/win/" class="post-title-link" itemprop="url">赢，都可以赢</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2021-09-27 00:01:49 / Modified: 10:30:12" itemprop="dateCreated datePublished" datetime="2021-09-27T00:01:49+08:00">2021-09-27</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          Here's something encrypted, password is required to continue reading.
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/09/27/win/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/09/28/hashset_source_code/" rel="prev" title="How hashSet and its methods work">
+      <i class="fa fa-chevron-left"></i> How hashSet and its methods work
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
       </footer>
+    
   </article>
   
   
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://shockyoungchn.github.io/2021/09/26/SamuraiY-test/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Samurai Young">
-      <meta itemprop="description" content="Young's code & their own zen cosmos">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SamuraiY's Zen">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/26/SamuraiY-test/" class="post-title-link" itemprop="url">SamuraiY_test</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2021-09-26 11:39:49 / Modified: 15:19:21" itemprop="dateCreated datePublished" datetime="2021-09-26T11:39:49+08:00">2021-09-26</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>This is the first blog,the following text is for test;</p>
-<p>We’re not here because we’re free. We’re here because we are not free.<br>There’s no escaping reason, no denying purpose. Because, as we both know, without purpose, we would not exist.</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
   
 
 
@@ -558,6 +372,7 @@ ps：以后应该不会这样更新了，以后只贴代码、题目、简单思
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E4%BA%8ELC141"><span class="nav-number">1.</span> <span class="nav-text">对于LC141:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E4%BA%8ELC142"><span class="nav-number">2.</span> <span class="nav-text">对于LC142:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%8F%E5%88%86%E6%9E%90%E5%8F%AF%E5%BE%97%E4%B8%A4%E4%B8%AA%E7%BB%93%E8%AE%BA"><span class="nav-number">2.1.</span> <span class="nav-text">经分析可得两个结论</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%BB%93%E8%AE%BA"><span class="nav-number">2.1.1.</span> <span class="nav-text">第一个结论 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E4%B8%AA%E7%BB%93%E8%AE%BA"><span class="nav-number">2.1.2.</span> <span class="nav-text">第二个结论</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A9%E7%94%A8%E7%BB%93%E8%AE%BA%E8%A7%A3%E9%A2%98"><span class="nav-number">2.2.</span> <span class="nav-text">利用结论解题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%EF%BC%9A"><span class="nav-number">2.3.</span> <span class="nav-text">代码：</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
